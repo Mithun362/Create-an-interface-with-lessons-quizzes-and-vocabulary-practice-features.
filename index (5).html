@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Learning Interface</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">LearnApp</div>
+    <ul class="nav-links">
+      <li><a href="#lessons">Lessons</a></li>
+      <li><a href="#quizzes">Quizzes</a></li>
+      <li><a href="#vocabulary">Vocabulary</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- Badge -->
+  <div id="badge" class="badge">BANDGE@CATLOVER</div>
+
+  <!-- Section: Lessons -->
+  <section id="lessons" class="section">
+    <h2>Lessons</h2>
+    <p>Access a variety of lessons tailored to your interests and learning goals.</p>
+    <ul>
+      <li><strong>Interactive Videos:</strong> Watch engaging videos that simplify complex topics.</li>
+      <li><strong>Step-by-Step Tutorials:</strong> Follow guided tutorials for hands-on learning.</li>
+      <li><strong>Progress Tracking:</strong> Monitor your progress with a detailed dashboard.</li>
+    </ul>
+    <button class="btn" onclick="showAlert('Start Learning!')">Start Learning</button>
+  </section>
+
+  <!-- Section: Quizzes -->
+  <section id="quizzes" class="section">
+    <h2>Quizzes</h2>
+    <p>Test your knowledge with engaging quizzes.</p>
+    <ul>
+      <li><strong>Multiple Choice Questions:</strong> Test your understanding of key concepts.</li>
+      <li><strong>Timed Challenges:</strong> Improve your speed and accuracy under time constraints.</li>
+      <li><strong>Instant Feedback:</strong> Receive feedback to understand where you can improve.</li>
+    </ul>
+    <button class="btn" onclick="showAlert('Take a Quiz!')">Take a Quiz</button>
+  </section>
+
+  <!-- Section: Vocabulary Practice -->
+  <section id="vocabulary" class="section">
+    <h2>Vocabulary Practice</h2>
+    <p>Enhance your vocabulary with interactive exercises.</p>
+    <ul>
+      <li><strong>Flashcards:</strong> Memorize new words using digital flashcards.</li>
+      <li><strong>Word Games:</strong> Play word puzzles and games to reinforce learning.</li>
+      <li><strong>Daily Word Challenge:</strong> Learn a new word every day and use it in sentences.</li>
+    </ul>
+    <button class="btn" onclick="showAlert('Practice Now!')">Practice Now</button>
+  </section>
+
+  <script>
+    // Variable to hold badge information
+    const badge = "BANDGE@CATLOVER";
+
+    // Function to show alert message
+    function showAlert(message) {
+      alert(`Badge: ${badge}\nAction: ${message}`);
+    }
+
+    // Functionality for the nav toggle button (optional)
+    const navToggle = document.getElementById("navToggle");
+    navToggle.addEventListener("click", () => {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

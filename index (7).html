@@ -1,0 +1,21 @@
+// Variable to hold badge information
+const badge = "BANDGE@CATLOVER";
+
+// Function to show alert message
+function showAlert(message) {
+  alert(`Badge: ${badge}\nAction: ${message}`);
+}
+
+// Toggle navbar links on small screens
+const navToggle = document.getElementById("navToggle");
+navToggle.addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.toggle("active");
+});
+
+// Add click events for buttons for demonstration purposes
+document.querySelectorAll(".btn").forEach(button => {
+  button.addEventListener("click", (e) => {
+    const action = e.target.textContent;
+    showAlert(action);
+  });
+});
